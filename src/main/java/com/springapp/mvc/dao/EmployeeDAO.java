@@ -1,9 +1,6 @@
 package com.springapp.mvc.dao;
 
 import com.springapp.mvc.model.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-
 /**
  * Created by Administrator on 24.08.2014.
  */
