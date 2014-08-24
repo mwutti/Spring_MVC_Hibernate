@@ -1,7 +1,5 @@
 package com.springapp.mvc;
 
-import com.springapp.mvc.dao.EmployeeDAO;
-import com.springapp.mvc.dao.EmployeeDAOImpl;
 import com.springapp.mvc.model.Employee;
 import com.springapp.mvc.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +18,8 @@ public class HelloController {
 	public String printWelcome(ModelMap model) {
         Employee emp = new Employee();
         emp.setAge(12);
-        emp.setName("Kukuk");
-        emp.setId("1909");
+        emp.setName("Juno");
         employeeService.persistEmployee(emp);
-        System.out.println(employeeService.findEmployeeById("100").getName());
 
 		model.addAttribute("message", "Hello world!");
 		return "hello";

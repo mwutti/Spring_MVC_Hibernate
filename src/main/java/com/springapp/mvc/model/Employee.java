@@ -2,15 +2,19 @@ package com.springapp.mvc.model;
 
 
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.annotation.Generated;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee {
-
     @Id
-    @Column(name = "ID")
-    private String id;
+    @GenericGenerator(name="gen",strategy="increment")
+    @GeneratedValue(generator="gen")
+    @Column(name = "ID", unique = true, nullable = false, precision = 15, scale = 0)
+    private Long id;
 
     @Column(name = "NAME", nullable = false)
     private String name;
@@ -21,11 +25,11 @@ public class Employee {
     public Employee() {
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
