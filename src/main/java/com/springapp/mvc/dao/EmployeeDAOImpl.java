@@ -24,17 +24,17 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
     @Transactional
     @Override
-    public Employee findEmployeeById(String id) {
+    public Employee findEmployeeById(Long id) {
 
         return (Employee)sessionFactory.getCurrentSession().get(Employee.class, id);
     }
-
+    @Transactional
     @Override
     public Employee updateEmployee(Employee employee) {
         sessionFactory.getCurrentSession().update(employee);
         return employee;
     }
-
+    @Transactional
     @Override
     public Employee deleteEmployee(Employee employee) {
         sessionFactory.getCurrentSession().delete(employee);

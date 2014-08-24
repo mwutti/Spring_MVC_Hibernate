@@ -16,12 +16,10 @@ public class HelloController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
-        Employee emp = new Employee();
-        emp.setAge(12);
-        emp.setName("Juno");
-        employeeService.persistEmployee(emp);
 
-		model.addAttribute("message", "Hello world!");
+
+        Employee emp = employeeService.findEmployeeById(3L);
+		model.addAttribute("message", String.format("Hello %s!", emp.getName()));
 		return "hello";
 	}
 }
