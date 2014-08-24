@@ -14,7 +14,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     private EmployeeDAO employeeDao;
 
     @Override
-    public Employee findEmployeeById(String id) {
+    public Employee findEmployeeById(Long id) {
        return employeeDao.findEmployeeById(id);
     }
 

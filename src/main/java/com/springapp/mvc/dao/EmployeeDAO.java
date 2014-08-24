@@ -8,7 +8,7 @@ import com.springapp.mvc.model.Employee;
 public interface EmployeeDAO {
     Employee persistEmployee(Employee employee);
 
-    Employee findEmployeeById(String id);
+    Employee findEmployeeById(Long id);
 
     Employee updateEmployee(Employee employee);
 

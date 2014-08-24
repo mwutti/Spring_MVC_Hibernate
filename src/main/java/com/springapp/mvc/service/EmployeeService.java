@@ -6,7 +6,7 @@ import com.springapp.mvc.model.Employee;
  * Created by Administrator on 24.08.2014.
  */
 public interface EmployeeService {
-    Employee findEmployeeById(String id);
+    Employee findEmployeeById(Long id);
 
     Employee updateEmployee(Employee employee);
 
